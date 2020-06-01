@@ -2,16 +2,16 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
+  new Category('c1', 'Breakfast and Brunch', '#f5428d','https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Eggs-as-food.jpg/360px-Eggs-as-food.jpg'),
+  new Category('c2', 'Cakes', '#f54242', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chocolate_cupcakes_with_cream_icing_and_red_sprinkles.jpg/330px-Chocolate_cupcakes_with_cream_icing_and_red_sprinkles.jpg'),
+  new Category('c3', 'Italian', '#f5a442', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Penne_with_eggplant_and_basil_in_yogurt-tomato_sauce.jpg/330px-Penne_with_eggplant_and_basil_in_yogurt-tomato_sauce.jpg'),
+  new Category('c4', 'BBQ & Grilling', '#f5d142', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Arkansas_BBQ_001.jpg/330px-Arkansas_BBQ_001.jpg'),
+  new Category('c5', 'Healthy', '#368dff', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/330px-Good_Food_Display_-_NCI_Visuals_Online.jpg'),
+  new Category('c6', 'Breads', '#41d95d', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/GrainProducts.jpg/330px-GrainProducts.jpg'),
+  new Category('c7', 'Smoothies', '#9eecff', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Culinary_fruits_front_view.jpg/225px-Culinary_fruits_front_view.jpg'),
+  new Category('c8', 'Asian', '#b9ffb0', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Vegetarian_Curry.jpeg/300px-Vegetarian_Curry.jpeg'),
+  new Category('c9', 'Fish', '#ffc7ff', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/350px-2007feb-sushi-odaiba-manytypes.jpg'),
+  new Category('c10', 'Vegan', '#47fced', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Foods_%28cropped%29.jpg/330px-Foods_%28cropped%29.jpg')
 ];
 
 export const MEALS = [
@@ -48,7 +48,7 @@ export const MEALS = [
 
   new Meal(
     'm2',
-    ['c2'],
+    ['c1'],
     'Toast Hawaii',
     'affordable',
     'simple',
@@ -136,7 +136,7 @@ export const MEALS = [
 
   new Meal(
     'm5',
-    ['c2', 'c5', 'c10'],
+    ['c2', 'c1', 'c10'],
     'Salad with Smoked Salmon',
     'luxurious',
     'simple',
@@ -201,7 +201,7 @@ export const MEALS = [
 
   new Meal(
     'm7',
-    ['c7'],
+    ['c1'],
     'Pancakes',
     'affordable',
     'simple',

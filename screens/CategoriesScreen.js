@@ -18,6 +18,7 @@ const CategoriesScreen = props => {
       <CategoryGridTile
         title={itemData.item.title}
         color={itemData.item.color}
+        imageUrl={itemData.item.categoryimageUrl}
         onSelect={() => {
           props.navigation.navigate({
             routeName: 'CategoryMeals',
@@ -42,7 +43,7 @@ const CategoriesScreen = props => {
 
 CategoriesScreen.navigationOptions = navData => {
   return {
-    headerTitle: 'Meal Categories',
+    headerTitle: 'Categories',
     headerLeft: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

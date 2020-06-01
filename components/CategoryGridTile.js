@@ -5,10 +5,12 @@ import {
   Text,
   StyleSheet,
   Platform,
-  TouchableNativeFeedback
+  TouchableNativeFeedback,
+  ImageBackground
 } from 'react-native';
 
 const CategoryGridTile = props => {
+  let xyz = props.imageUrl;
   let TouchableCmp = TouchableOpacity;
 
   if (Platform.OS === 'android' && Platform.Version >= 21) {
@@ -17,12 +19,21 @@ const CategoryGridTile = props => {
   return (
     <View style={styles.gridItem}>
       <TouchableCmp style={{ flex: 1 }} onPress={props.onSelect}>
-        <View
-          style={{ ...styles.container, ...{ backgroundColor: props.color } }}
-        >
-          <Text style={styles.title} numberOfLines={2}>
-            {props.title}
-          </Text>
+        <View>
+          <ImageBackground
+            source={{ uri: props.imageUrl }}
+            style={styles.bgImage}
+          >
+            <View
+            //style={{ ...styles.container, ...{ backgroundColor: props.color } }}
+            >
+              <View style={styles.titleContainer}>
+                <Text style={styles.title} numberOfLines={2}>
+                  {props.title}
+                </Text>
+              </View>
+            </View>
+          </ImageBackground>
         </View>
       </TouchableCmp>
     </View>
@@ -52,11 +63,22 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'flex-end'
   },
+  titleContainer: {
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingVertical: 5,
+    paddingHorizontal: 12
+  },
   title: {
     fontFamily: 'open-sans-bold',
     fontSize: 22,
-    textAlign: 'right'
-  }
+    textAlign: 'right',
+    color: 'white'
+  },
+  bgImage: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'flex-end',
+  },
 });
 
 export default CategoryGridTile;
